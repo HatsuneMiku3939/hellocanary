@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for i in `seq 1 300000`
+do
+	for j in `seq 1 10`
+	do
+		curl -XGET -s https://www.nt3.puripettapon.com/ > /dev/null
+		# curl -XGET -s -H "Host: 94c8817d.ngrok.io" http://172.17.0.2:32767/api/v1/hello > /dev/null &
+		# curl -XGET -H "Host: 94c8817d.ngrok.io" http://172.17.0.2:32767/api/v1/hello
+		# curl -XGET -H "Host: 94c8817d.ngrok.io" http://172.17.0.2:32767/api/v1/hello/noexist
+	done
+
+	sleep 1
+done

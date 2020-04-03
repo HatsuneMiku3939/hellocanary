@@ -1,0 +1,16 @@
+
+replicaCount: 10
+
+image:
+  repository: docker.io/hatsunemiku/hellocanary
+  tag: blue
+
+service:
+  type: ClusterIP
+  port: 8080
+
+ingress:
+  enabled: true
+  hosts:
+    - host: 94c8817d.ngrok.io
+      paths: ["/api/v1/*"]
