@@ -5,6 +5,10 @@ image:
   repository: docker.io/hatsunemiku/hellocanary
   tag: green
 
+envs:
+  - name: TEST
+    value: "3939"
+
 service:
   type: ClusterIP
   port: 8080
