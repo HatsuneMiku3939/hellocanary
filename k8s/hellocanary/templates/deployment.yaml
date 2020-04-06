@@ -57,12 +57,11 @@ spec:
     {{- end }}
   strategy:
     canary:
-      canaryService: {{ include "hellocanary.fullname" . }}-canary
       analysis:
         templateName: success-rate
         args:
         - name: service-name
-          value: {{ include "hellocanary.fullname" . }}-canary
+          value: {{ include "hellocanary.fullname" . }}
       steps:
       - setWeight: 20
       - pause: {duration: 300}

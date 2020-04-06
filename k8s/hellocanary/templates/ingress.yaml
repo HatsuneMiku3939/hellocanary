@@ -34,8 +34,5 @@ spec:
           - backend:
               serviceName: {{ $fullName }}
               servicePort: {{ $svcPort }}
-          - backend:
-              serviceName: {{ $fullName }}-canary
-              servicePort: {{ $svcPort }}
   {{- end }}
 {{- end }}
