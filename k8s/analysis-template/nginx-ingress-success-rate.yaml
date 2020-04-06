@@ -10,8 +10,10 @@ spec:
     interval: 30s
     initialDelay: 30s
     failureLimit: 5
-    successCondition: result[0] >= 0.50
-    failureCondition: result[0] < 0.50
+    successCondition: |
+      result[0] >= 0.50
+    failureCondition: |
+      result[0] < 0.50
     provider:
       prometheus:
         address: http://prometheus-operator-prometheus.monitoring.svc.cluster.local:9090
