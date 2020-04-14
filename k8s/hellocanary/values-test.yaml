@@ -17,4 +17,3 @@ ingress:
   enabled: true
   hosts:
     - host: 94c8817d.ngrok.io
-      paths: ["/api/v1/*"]
