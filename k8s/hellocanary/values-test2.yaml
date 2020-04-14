@@ -1,9 +1,9 @@
 
-replicaCount: 5
+replicaCount: 1
 
 image:
   repository: docker.io/hatsunemiku/hellocanary
-  tag: blue
+  tag: slow
 
 envs:
   - name: TEST
@@ -17,4 +17,4 @@ ingress:
   enabled: true
   hosts:
     - host: 94c8817d.ngrok.io
-      paths: ["/api/v1/*"]
+      paths: ["/api/v2/*"]
